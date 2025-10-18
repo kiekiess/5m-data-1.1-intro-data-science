@@ -41,7 +41,7 @@
 - A:
 
   ```bash
-  git add -A
+  git add -Agit a
   ```
 
 - B:

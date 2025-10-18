@@ -17,9 +17,8 @@ def fizz_buzz(number):
     """
     return
 
-# assignemnt 1.1 Q1
+# assignment 1.1 Q1
 
-def fizz_buzz(number):
     if number % 3 == 0 and number % 5 == 0:
         return "FizzBuzz"
     elif number % 5 == 0:
@@ -43,8 +42,6 @@ print (fizz_buzz(number))
 
 # Write a function that takes a list of numbers and returns the sum of the squares of all the numbers.
 
-# assignemnt 1.1 Q2
-
 def sum_of_squares(numbers):
     """Returns the sum of the squares of all the numbers in a list.
     >>> sum_of_squares([1, 2, 3])
@@ -54,8 +51,13 @@ def sum_of_squares(numbers):
     """
     return
 
-def sum_of_squares(numbers):
-   return sum([number**2 for number in numbers])
+# assignment 1.1 Q2
+
+
+    total = 0
+    for x in numbers:
+        total += x**2
+    return total
 
 numbers = [1 ,2 ,3]
 print (sum_of_squares(numbers))
@@ -79,19 +81,23 @@ def count_vowels(string):
     return
 
 
-# assignemnt 1.1 Q3
+# assignment 1.1 Q3
 
-def count_vowels(string):
-    vowels = "aeiou"
-    return len([word for word in string if word in vowels])
-
+    def count_vowels(string):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    count = 0
+    for letter in string.lower():
+        if letter in vowels:
+            count += 1
+    return count
 
 string = "hello"
 print (count_vowels(string))
 string = "aeiou"
 print (count_vowels(string))
-string = "kierun"
+string = "kieKIE"
 print (count_vowels(string))
+
 
 # Question 4
 
@@ -107,10 +113,14 @@ def count_repeats(string):
     """
     return
 
-# assignemnt 1.1 Q4
+# assignment 1.1 Q4
 
-def count_repeats(string):
-    return len([word for word in string if string.count(word) > 1])
+    count = 0
+    for letter in string:
+        if string.count(letter) > 1:
+            count += 1
+    return count
+
 
 string = "hello"
 print (count_repeats(string))
@@ -118,6 +128,7 @@ string = "aeiou"
 print (count_repeats(string))
 string = "Kiekie"
 print (count_repeats(string))
+
 
 
 if __name__ == "__main__":
