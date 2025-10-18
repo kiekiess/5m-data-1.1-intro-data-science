@@ -84,7 +84,7 @@ def count_vowels(string):
 # assignment 1.1 Q3
 
     def count_vowels(string):
-    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowels = "aeiou"
     count = 0
     for letter in string.lower():
         if letter in vowels:
@@ -97,6 +97,7 @@ string = "aeiou"
 print (count_vowels(string))
 string = "kieKIE"
 print (count_vowels(string))
+
 
 
 # Question 4
